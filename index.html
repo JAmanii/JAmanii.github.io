@@ -1,7 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <h1>Your Name</h1>
+        <nav>
+            <ul>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Your Headline</h2>
+        <p>Your subheadline</p>
+        <a href="#portfolio" class="cta">View Portfolio</a>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="project-grid">
+            <!-- Repeat this block for each project -->
+            <div class="project">
+                <img src="project-image.jpg" alt="Project Image">
+                <h3>Project Title</h3>
+                <p>Short project description</p>
+            </div>
+            <!-- End project block -->
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <img src="your-photo.jpg" alt="Your Photo">
+        <p>Your bio goes here.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1234567890</a></p>
+        <p>Follow me on <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | <a href="https://www.instagram.com/yourprofile" target="_blank">Instagram</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
