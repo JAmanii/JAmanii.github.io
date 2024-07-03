@@ -3,83 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Development Portfolio</title>
-    <style>
-        body {
-            background-color: #111;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-
-        section {
-            padding: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #000;
-            color: #fff;
-        }
-    </style>
+    <title>AI Space Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Jamil Amani</h1>
-        <nav>
-            <ul>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="navbar">
+            <div class="logo">AI Space</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
-    <section id="hero">
-        <h2>Your Headline</h2>
-        <p>Your subheadline</p>
-        <a href="#portfolio" class="cta">View Portfolio</a>
-    </section>
-
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="project-grid">
-            <!-- Repeat this block for each project -->
-            <div class="project">
-                <img src="project-image.jpg" alt="Project Image">
-                <h3>Project Title</h3>
-                <p>Short project description</p>
-            </div>
-            <!-- End project block -->
+    
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to the Future</h1>
+            <p>Exploring the cosmos with AI</p>
+            <a href="work.html" class="cta-button">View Portfolio</a>
         </div>
     </section>
-
-    <section id="about">
-        <h2>About</h2>
-        <img src="your-photo.jpg" alt="Your Photo">
-        <p>Your bio goes here.</p>
+    
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>I am a digital artist specializing in creating AI-driven space-themed art. My work combines the vastness of space with the cutting-edge technology of artificial intelligence.</p>
     </section>
-
-    <section id="contact">
+    
+    <section id="contact" class="contact-section">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>Phone: <a href="tel:+1234567890">+1234567890</a></p>
-        <p>Follow me on <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | <a href="https://www.instagram.com/yourprofile" target="_blank">Instagram</a></p>
+        <form>
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
-
+    
     <footer>
-        <p>&copy; 2024 Jamil Amani. All rights reserved.</p>
+        <p>&copy; 2024 AI Space Portfolio</p>
     </footer>
 </body>
 </html>
