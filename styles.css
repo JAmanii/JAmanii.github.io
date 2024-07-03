@@ -1,13 +1,12 @@
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: "Saira Variablefont Wdth Wght", sans-serif;
     background-color: #000;
     color: #fff;
 }
 
 header {
     background-color: #0b0d1d;
-    height: 100px; /* Explicitly set a reasonable height */
     padding: 10px 20px;
     position: fixed;
     width: 100%;
@@ -16,18 +15,19 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
 header .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
-    max-height: 100%; /* Constrain logo to the header height */
+    padding-left: 20px; /* Adjust this value as needed */
 }
 
 header .logo img {
-    width: auto; /* Maintain aspect ratio */
-    height: 100%; /* Scale logo to fit the header height */
+    width: 50px;
+    height: 50px;
 }
 
 header .logo h1 {
@@ -43,6 +43,7 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 20px;
+    padding-right: 20px; /* Adjust this value as needed */
 }
 
 nav ul li {
@@ -64,7 +65,7 @@ nav ul li a {
     align-items: center;
     text-align: center;
     padding: 20px;
-    margin-top: 120px; /* Adjust for the fixed header */
+    margin-top: 80px; /* Adjust for the fixed header */
 }
 
 #hero h2 {
