@@ -17,9 +17,15 @@ header {
     z-index: 1000;
 }
 
-header h1 {
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo h1 {
     margin: 0;
     font-size: 24px;
+    color: #fff;
 }
 
 nav ul {
@@ -49,6 +55,7 @@ nav ul li a {
     align-items: center;
     text-align: center;
     padding: 20px;
+    margin-top: 60px; /* Add this line to offset the fixed header */
 }
 
 #hero h2 {
