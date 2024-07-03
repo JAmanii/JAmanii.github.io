@@ -26,8 +26,8 @@ header .logo {
 }
 
 header .logo img {
-    width: 50px;
-    height: 50px;
+    width: 200px;
+    height: 200px;
 }
 
 header .logo h1 {
@@ -97,12 +97,12 @@ nav ul li a:hover {
     background-color: #ff7000;
 }
 
-#portfolio, #about, #contact {
+#portfolio, #about{
     padding: 60px 20px;
     text-align: center;
 }
 
-#portfolio h2, #about h2, #contact h2 {
+#portfolio h2, #about h2{
     font-size: 36px;
     margin-bottom: 40px;
 }
@@ -138,7 +138,66 @@ nav ul li a:hover {
 }
 
 footer {
-    padding: 20px 0;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
     text-align: center;
-    background-color: #0b0d1d;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+}
+
+.footer-content .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-content .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.footer-nav ul li {
+    display: inline;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: #ff9000;
+}
+
+.social-media {
+    display: flex;
+    gap: 20px;
+}
+
+.social-media a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-message {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
 }
