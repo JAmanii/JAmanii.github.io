@@ -1458,7 +1458,6 @@ textarea.w-input, textarea.w-select {
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-transform: translate(0);
 }
 
 .w-lightbox-backdrop, .w-lightbox-container {
@@ -1593,7 +1592,6 @@ textarea.w-input, textarea.w-select {
   width: 10vh;
   padding: 2vh 1vh;
   display: inline-block;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .w-lightbox-active {
@@ -2771,6 +2769,7 @@ figcaption {
   min-height: 60vh;
 }
 
+/* Base styles for the portfolio component */
 .portfolio-component {
   flex-direction: column;
   align-items: center;
@@ -2795,12 +2794,52 @@ figcaption {
   text-decoration: none;
 }
 
+/* Styling for the image wrapper with animation effects */
 .portfolio-image-wrapper {
   width: 100%;
   position: relative;
   overflow: hidden;
+  opacity: 0; /* Hidden initially for animation */
+  transform: translateY(20px); /* Move down slightly initially */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+/* When the image wrapper is visible */
+.portfolio-image-wrapper.is-visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move to original position */
+}
+
+/* Styling for the image */
+.portfolio-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+/* Zoom effect on hover */
+.portfolio-image-wrapper:hover .portfolio-image {
+  transform: scale(1.1); /* Scale image to 110% */
+}
+
+/* Styling for the image overlay */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition for overlay */
+}
+
+/* Show overlay on hover */
+.portfolio-image-wrapper:hover .image-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+/* Styling for the portfolio tag list and items */
 .portfolio-tag-list {
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
@@ -2822,9 +2861,28 @@ figcaption {
   border-bottom: 2px solid #000;
 }
 
+/* Button wrapper styling */
 .portfolio-button-wrapper {
   margin-top: 1.5rem;
   display: flex;
+}
+
+
+/* Optional: Image overlay styles */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+/* Show overlay on hover */
+.portfolio-image-wrapper:hover .image-overlay {
+  opacity: 1; /* Show overlay on hover */
 }
 
 .about-component {
@@ -3443,12 +3501,6 @@ figcaption {
     padding-right: 0;
   }
 
-  .portfolio-list {
-    grid-column-gap: 2rem;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-  }
-
   .about-component {
     grid-column-gap: 3rem;
     grid-row-gap: 2rem;
@@ -3735,56 +3787,6 @@ figcaption {
     min-height: 60vh;
     display: flex;
   }
-
-  .portfolio-list {
-    grid-column-gap: 2rem;
-    grid-row-gap: 3rem;
-    column-count: 1;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
-    grid-auto-columns: 1fr;
-  }
-
-  .portfolio-item {
-    margin-bottom: 3rem;
-  }
-
-  .portfolio-image-wrapper {
-    position: relative;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.portfolio-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.portfolio-image.visible {
-  opacity: 1;
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.portfolio-image-wrapper:hover .portfolio-image {
-    transform: scale(1.05); 
-}
-
-.portfolio-image-wrapper:hover .image-overlay {
-    opacity: 1; 
-}
 
   .about-component {
     grid-column-gap: 1.25rem;
