@@ -3749,6 +3749,12 @@ figcaption {
     margin-bottom: 3rem;
   }
 
+  .portfolio-image {
+    width: 100%;
+    height: auto; 
+}
+
+
   .about-component {
     grid-column-gap: 1.25rem;
     grid-row-gap: 1.25rem;

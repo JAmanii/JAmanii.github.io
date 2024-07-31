@@ -8,7 +8,13 @@
         var path = window.location.pathname;
         var redirects = {
             "/work": "/work.html",
-            "/about": "/about.html"
+            "/about": "/about.html",
+            "/works/project1": "/works/project1.html",
+            "/works/project2": "/works/project2.html",
+            "/works/project3": "/works/project3.html",
+            "/works/project4": "/works/project4.html",
+            "/works/project5": "/works/project5.html",
+            "/works/project6": "/works/project6.html"
         };
         if (redirects[path]) {
             window.location.replace(redirects[path]);
